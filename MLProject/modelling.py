@@ -3,8 +3,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
-mlflow.set_experiment("Prediksi Risiko COVID Indonesia")
-
 # load data hasil preprocessing
 df = pd.read_csv("namadataset_preprocessing.csv")
 X = df.drop(columns=["target"])
