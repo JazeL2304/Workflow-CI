@@ -65,7 +65,7 @@ jobs:
               model_uri=f'runs:/{run_id}/model',
               name='jazel2304/msml-covid-model',
               env_manager='local',
-              base_image='python:3.11-slim'
+              base_image='python:3.12-slim'
           )
           "
 
