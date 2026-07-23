@@ -42,7 +42,7 @@ jobs:
           name: trained-model
           path: MLProject/mlruns/
 
-      - name: Build Docker Model
+	- name: Build Docker Model
         run: |
           cd MLProject
           RUN_ID=$(ls -t mlruns/0 | grep -v yaml | head -n 1)
@@ -51,7 +51,7 @@ jobs:
           mlflow.models.build_docker(
               model_uri='runs:/${RUN_ID}/model',
               name='jazel2304/msml-covid-model',
-              env_manager='conda',
+              env_manager='virtualenv',
               base_image='python:3.11-slim'
           )
           "
