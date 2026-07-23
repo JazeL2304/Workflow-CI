@@ -64,7 +64,7 @@ jobs:
           mlflow.models.build_docker(
               model_uri=f'runs:/{run_id}/model',
               name='jazel2304/msml-covid-model',
-              env_manager='virtualenv',
+              env_manager='local',
               base_image='python:3.11-slim'
           )
           "
