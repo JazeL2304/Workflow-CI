@@ -52,7 +52,7 @@ jobs:
               model_uri='runs:/${RUN_ID}/model',
               name='jazel2304/msml-covid-model',
               env_manager='conda',
-              base_image='python:3.12'
+              base_image='python:3.11-slim'
           )
           "
 
